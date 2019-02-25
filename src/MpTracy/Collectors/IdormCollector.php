@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-namespace RunTracy\Collectors;
+namespace MpTracy\Collectors;
 
 class IdormCollector
 {

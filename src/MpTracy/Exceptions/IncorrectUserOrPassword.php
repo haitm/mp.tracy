@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-namespace RunTracy\Exceptions;
+namespace MpTracy\Exceptions;
 
 class IncorrectUserOrPassword extends \Exception
 {

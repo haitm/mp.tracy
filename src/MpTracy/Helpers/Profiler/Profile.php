@@ -1,6 +1,6 @@
 <?php
 
-namespace RunTracy\Helpers\Profiler;
+namespace MpTracy\Helpers\Profiler;
 
 use JsonSerializable;
 

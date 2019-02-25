@@ -15,14 +15,14 @@
  * limitations under the License.
  */
 
-namespace RunTracy\Controllers;
+namespace MpTracy\Controllers;
 
 use Psr\Http\Message\RequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
-use RunTracy\Helpers\Console\WebConsoleRPCServer;
+use MpTracy\Helpers\Console\WebConsoleRPCServer;
 use Interop\Container\ContainerInterface;
 
-class RunTracyConsole extends WebConsoleRPCServer
+class MpTracyConsole extends WebConsoleRPCServer
 {
     private $ci;
 

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-namespace RunTracy\Helpers;
+namespace MpTracy\Helpers;
 
 use Tracy\IBarPanel;
 

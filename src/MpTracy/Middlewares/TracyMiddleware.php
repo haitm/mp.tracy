@@ -15,17 +15,17 @@
  * limitations under the License.
  */
 
-namespace RunTracy\Middlewares;
+namespace MpTracy\Middlewares;
 
 use Slim\App;
 use Psr\Http\Message\RequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 use Tracy\Debugger;
-use RunTracy\Helpers\PanelSelector;
+use MpTracy\Helpers\PanelSelector;
 
 /**
  * Class TracyMiddleware
- * @package RunTracy\Middlewares
+ * @package MpTracy\Middlewares
  */
 class TracyMiddleware
 {
@@ -68,7 +68,7 @@ class TracyMiddleware
         }
         if (isset($cfg['showEloquentORMPanel'])) {
             if (class_exists('\Illuminate\Database\Capsule\Manager')) {
-                Debugger::getBar()->addPanel(new \RunTracy\Helpers\EloquentORMPanel(
+                Debugger::getBar()->addPanel(new \MpTracy\Helpers\EloquentORMPanel(
                     \Illuminate\Database\Capsule\Manager::getQueryLog()
                 ));
             } else {
@@ -77,66 +77,66 @@ class TracyMiddleware
             }
         }
         if (isset($cfg['showTwigPanel'])) {
-            Debugger::getBar()->addPanel(new \RunTracy\Helpers\TwigPanel(
+            Debugger::getBar()->addPanel(new \MpTracy\Helpers\TwigPanel(
                 $this->container->get('twig_profile')
             ));
         }
         if (isset($cfg['showPhpInfoPanel'])) {
-            Debugger::getBar()->addPanel(new \RunTracy\Helpers\PhpInfoPanel());
+            Debugger::getBar()->addPanel(new \MpTracy\Helpers\PhpInfoPanel());
         }
         if (isset($cfg['showSlimEnvironmentPanel'])) {
-            Debugger::getBar()->addPanel(new \RunTracy\Helpers\SlimEnvironmentPanel(
+            Debugger::getBar()->addPanel(new \MpTracy\Helpers\SlimEnvironmentPanel(
                 \Tracy\Dumper::toHtml($this->container->get('environment')),
                 $this->versions
             ));
         }
         if (isset($cfg['showSlimContainer'])) {
-            Debugger::getBar()->addPanel(new \RunTracy\Helpers\SlimContainerPanel(
+            Debugger::getBar()->addPanel(new \MpTracy\Helpers\SlimContainerPanel(
                 \Tracy\Dumper::toHtml($this->container),
                 $this->versions
             ));
         }
         if (isset($cfg['showSlimRouterPanel'])) {
-            Debugger::getBar()->addPanel(new \RunTracy\Helpers\SlimRouterPanel(
+            Debugger::getBar()->addPanel(new \MpTracy\Helpers\SlimRouterPanel(
                 \Tracy\Dumper::toHtml($this->container->get('router')),
                 $this->versions
             ));
         }
         if (isset($cfg['showSlimRequestPanel'])) {
-            Debugger::getBar()->addPanel(new \RunTracy\Helpers\SlimRequestPanel(
+            Debugger::getBar()->addPanel(new \MpTracy\Helpers\SlimRequestPanel(
                 \Tracy\Dumper::toHtml($this->container->get('request')),
                 $this->versions
             ));
         }
         if (isset($cfg['showSlimResponsePanel'])) {
-            Debugger::getBar()->addPanel(new \RunTracy\Helpers\SlimResponsePanel(
+            Debugger::getBar()->addPanel(new \MpTracy\Helpers\SlimResponsePanel(
                 \Tracy\Dumper::toHtml($this->container->get('response')),
                 $this->versions
             ));
         }
         if (isset($cfg['showMormPanel'])) {
-            Debugger::getBar()->addPanel(new \RunTracy\Helpers\MormPanel(db()->log()));
+            Debugger::getBar()->addPanel(new \MpTracy\Helpers\MormPanel(db()->log()));
         }
         if (isset($cfg['showVendorVersionsPanel'])) {
-            Debugger::getBar()->addPanel(new \RunTracy\Helpers\VendorVersionsPanel());
+            Debugger::getBar()->addPanel(new \MpTracy\Helpers\VendorVersionsPanel());
         }
 
         if (isset($cfg['showIncludedFiles'])) {
-            Debugger::getBar()->addPanel(new \RunTracy\Helpers\IncludedFiles());
+            Debugger::getBar()->addPanel(new \MpTracy\Helpers\IncludedFiles());
         }
 
         if (isset($cfg['showProfilerPanel'])) {
-            Debugger::getBar()->addPanel(new \RunTracy\Helpers\ProfilerPanel(
+            Debugger::getBar()->addPanel(new \MpTracy\Helpers\ProfilerPanel(
                 $this->defcfg['configs']['ProfilerPanel']
             ));
         }
         if (isset($cfg['showIdiormPanel'])) {
-            Debugger::getBar()->addPanel(new \RunTracy\Helpers\IdiormPanel());
+            Debugger::getBar()->addPanel(new \MpTracy\Helpers\IdiormPanel());
         }
         if (isset($cfg['showDoctrinePanel'])) {
             if (class_exists('\Doctrine\DBAL\Connection') && $this->container->has('doctrineConfig')) {
                 Debugger::getBar()->addPanel(
-                    new \RunTracy\Helpers\DoctrinePanel(
+                    new \MpTracy\Helpers\DoctrinePanel(
                         $this->container->get('doctrineConfig')->getSQLLogger()->queries
                     )
                 );
@@ -163,12 +163,12 @@ class TracyMiddleware
         if (isset($this->defcfg['showIdiormPanel']) && $this->defcfg['showIdiormPanel'] > 0) {
             if (class_exists('\ORM')) {
                 // no return values
-                new \RunTracy\Collectors\IdormCollector();
+                new \MpTracy\Collectors\IdormCollector();
             }
         }
 
         if (isset($this->defcfg['showDoctrinePanel']) && class_exists('\Doctrine\DBAL\Connection')) {
-            new \RunTracy\Collectors\DoctrineCollector(
+            new \MpTracy\Collectors\DoctrineCollector(
                 $this->container,
                 $this->defcfg['showDoctrinePanel']
             );

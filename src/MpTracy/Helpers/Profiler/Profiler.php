@@ -1,10 +1,10 @@
 <?php
 
-namespace RunTracy\Helpers\Profiler;
+namespace MpTracy\Helpers\Profiler;
 
-use /** @noinspection PhpInternalEntityUsedInspection */ RunTracy\Helpers\Profiler\ProfilerService;
-use RunTracy\Helpers\Profiler\AdvancedProfiler;
-use RunTracy\Helpers\Profiler\Profile;
+use /** @noinspection PhpInternalEntityUsedInspection */ MpTracy\Helpers\Profiler\ProfilerService;
+use MpTracy\Helpers\Profiler\AdvancedProfiler;
+use MpTracy\Helpers\Profiler\Profile;
 
 class Profiler extends AdvancedProfiler
 {

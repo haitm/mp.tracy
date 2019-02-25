@@ -1,6 +1,6 @@
 <?php
 
-namespace RunTracy\Helpers\Profiler\Exception;
+namespace MpTracy\Helpers\Profiler\Exception;
 
 abstract class ProfilerException extends \Exception
 {
