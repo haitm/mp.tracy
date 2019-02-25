@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-namespace RunTracy\Helpers\Console;
+namespace MpTracy\Helpers\Console;
 
-use RunTracy\Exceptions\IncorrectUserOrPassword;
+use MpTracy\Exceptions\IncorrectUserOrPassword;
 
 class WebConsoleRPCServer extends BaseJsonRpcServer
 {

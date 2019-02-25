@@ -15,14 +15,14 @@
  * limitations under the License.
  */
 
-namespace RunTracy\Collectors;
+namespace MpTracy\Collectors;
 
 use Slim\Container;
 use Doctrine\DBAL\Logging\DebugStack;
 
 /**
  * Class DoctrineCollector
- * @package RunTracy\Collectors
+ * @package MpTracy\Collectors
  */
 class DoctrineCollector
 {

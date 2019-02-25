@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-namespace RunTracy\Helpers;
+namespace MpTracy\Helpers;
 
 use Tracy\IBarPanel;
 
@@ -114,7 +114,7 @@ class PanelSelector implements IBarPanel
         </script>
 
         <style type="text/css">
-            #tracy-debug-panel-RunTracy-Helpers-PanelSelector input[type="submit"] {
+            #tracy-debug-panel-MpTracy-Helpers-PanelSelector input[type="submit"] {
                 background: #DDEFDD !important;
                 padding: 3px !important;
                 border: 1px solid #D2D2D2 !important;

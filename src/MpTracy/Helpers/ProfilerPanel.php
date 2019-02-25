@@ -15,12 +15,12 @@
  * limitations under the License.
  */
 
-namespace RunTracy\Helpers;
+namespace MpTracy\Helpers;
 
-use RunTracy\Helpers\Profiler\Profiler;
-use RunTracy\Helpers\Profiler\Profile;
-use RunTracy\Helpers\Profiler\ProfilerService;
-use RunTracy\Helpers\Profiler\SimpleProfiler;
+use MpTracy\Helpers\Profiler\Profiler;
+use MpTracy\Helpers\Profiler\Profile;
+use MpTracy\Helpers\Profiler\ProfilerService;
+use MpTracy\Helpers\Profiler\SimpleProfiler;
 
 use Tracy\IBarPanel;
 

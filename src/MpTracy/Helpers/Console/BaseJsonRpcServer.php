@@ -1,6 +1,6 @@
 <?php
 
-namespace RunTracy\Helpers\Console;
+namespace MpTracy\Helpers\Console;
 
 /**
  * JSON RPC Server for Eaze

@@ -16,7 +16,7 @@
  */
 
 
-namespace RunTracy\Helpers;
+namespace MpTracy\Helpers;
 
 use Tracy\IBarPanel;
 

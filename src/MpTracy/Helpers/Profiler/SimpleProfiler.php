@@ -1,9 +1,9 @@
 <?php
 
-namespace RunTracy\Helpers\Profiler;
+namespace MpTracy\Helpers\Profiler;
 
-use RunTracy\Helpers\Profiler\Exception\EmptyStackException;
-use RunTracy\Helpers\Profiler\Exception\ProfilerException;
+use MpTracy\Helpers\Profiler\Exception\EmptyStackException;
+use MpTracy\Helpers\Profiler\Exception\ProfilerException;
 
 /**
  * Simple PHP class for profiling

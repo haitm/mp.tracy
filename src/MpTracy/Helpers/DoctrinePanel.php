@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-namespace RunTracy\Helpers;
+namespace MpTracy\Helpers;
 
 use Tracy\IBarPanel;
 
 /**
  * Class DoctrinePanel
- * @package RunTracy\Helpers
+ * @package MpTracy\Helpers
  */
 class DoctrinePanel implements IBarPanel
 {

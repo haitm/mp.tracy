@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-namespace RunTracy\Helpers;
+namespace MpTracy\Helpers;
 
 use Tracy\IBarPanel;
 
 /**
  * Class IdiormPanel
- * @package RunTracy\Helpers
+ * @package MpTracy\Helpers
  */
 class IdiormPanel implements IBarPanel
 {
@@ -63,7 +63,7 @@ class IdiormPanel implements IBarPanel
 
     private function parse()
     {
-        $this->logs = \RunTracy\Collectors\IdormCollector::getLog();
+        $this->logs = \MpTracy\Collectors\IdormCollector::getLog();
         if (empty($this->logs)) {
             $this->count = $this->time = 0;
             return '<p><strong>No Logs</strong>, maybe own collector work?</p>';
